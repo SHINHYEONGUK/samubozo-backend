@@ -1,8 +1,15 @@
 # SAMUBOZO: 사무보조 플랫폼
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Coverage](https://img.shields.io/badge/coverage-85%25-yellow) ![License](https://img.shields.io/badge/license-MIT-blue)
+🔗 **프론트엔드 레포:** https://github.com/samubozo/samubozo-front
 
-MSA 기반으로 인사·근태·휴가·급여·전자결재·일정·쪽지·알림·챗봇을 통합 관리하는 업무·인사관리 플랫폼입니다.
+---
+
+## 📺 구동 영상
+
+[![Demo 1](https://img.youtube.com/vi/fminNemR4aU/0.jpg)](https://youtu.be/fminNemR4aU)  
+[![Demo 2](https://img.youtube.com/vi/FNfunqiHYh8/0.jpg)](https://youtu.be/FNfunqiHYh8)  
+[![Demo 3](https://img.youtube.com/vi/I1nTGJL1h5I/0.jpg)](https://youtu.be/I1nTGJL1h5I)  
+[![Demo 4](https://img.youtube.com/vi/G7RX3c_EYRM/0.jpg)](https://youtu.be/G7RX3c_EYRM)
 
 ---
 
@@ -19,10 +26,9 @@ MSA 기반으로 인사·근태·휴가·급여·전자결재·일정·쪽지·�
 9. [팀 및 역할](#팀-및-역할)  
 10. [프로젝트 일정 & WBS](#프로젝트-일정--wbs)  
 11. [화면 설계](#화면-설계)  
-12. [시작하기](#시작하기)  
-13. [학습 내용 & 회고](#학습-내용--회고)  
-14. [향후 계획](#향후-계획)  
-15. [라이선스](#라이선스)  
+12. [학습 내용 & 회고](#학습-내용--회고)  
+13. [향후 계획](#향후-계획)  
+14. [라이선스](#라이선스)  
 
 ---
 
@@ -101,38 +107,38 @@ MSA 기반으로 인사·근태·휴가·급여·전자결재·일정·쪽지·�
 ### 도메인별 Swagger UI
 
 - **인사 관리**  
-  - http://{DOMAIN}/auth-service/swagger-ui.html  
-  - http://{DOMAIN}/hr-service/swagger-ui.html  
+  - `http://{DOMAIN}/auth-service/swagger-ui.html`  
+  - `http://{DOMAIN}/hr-service/swagger-ui.html`  
 
 - **근태 / 휴가**  
-  - http://{DOMAIN}/attendance-service/swagger-ui.html  
-  - http://{DOMAIN}/vacation-service/swagger-ui.html  
+  - `http://{DOMAIN}/attendance-service/swagger-ui.html`  
+  - `http://{DOMAIN}/vacation-service/swagger-ui.html`  
 
 - **결재 / 증명**  
-  - http://{DOMAIN}/approval-service/swagger-ui.html  
-  - http://{DOMAIN}/certificate-service/swagger-ui.html  
+  - `http://{DOMAIN}/approval-service/swagger-ui.html`  
+  - `http://{DOMAIN}/certificate-service/swagger-ui.html`  
 
 - **업무 지원**  
-  - http://{DOMAIN}/schedule-service/swagger-ui.html  
-  - http://{DOMAIN}/message-service/swagger-ui.html  
-  - http://{DOMAIN}/notification-service/swagger-ui.html  
-  - http://{DOMAIN}/chatbot-service/swagger-ui.html  
+  - `http://{DOMAIN}/schedule-service/swagger-ui.html`  
+  - `http://{DOMAIN}/message-service/swagger-ui.html`  
+  - `http://{DOMAIN}/notification-service/swagger-ui.html`  
+  - `http://{DOMAIN}/chatbot-service/swagger-ui.html`  
 
 - **급여 관리**  
-  - http://{DOMAIN}/payroll-service/swagger-ui.html  
+  - `http://{DOMAIN}/payroll-service/swagger-ui.html`  
 
-> **특징:** MSA 12개 서비스 API 통합·알파벳순 정렬·응답 시간 표시·실시간 테스트
+> **특징:** MSA 12개 서비스 API 문서 통합, 알파벳순 정렬, 응답 시간 표시, 실시간 테스트  
 
 ---
 
 ## 팀 및 역할
 
-| 이름       | 역할                                 | 주요 기여 서비스                                 |
-|------------|-------------------------------------|------------------------------------------------|
-| **신현국** | PM / 근태·휴가·결재 서비스 개발     | attendance-service, vacation-service, approval-service |
-| **김예은** | 백엔드 (인사·인증·증명서)           | auth-service, hr-service, certificate-service   |
-| **이호영** | 프론트엔드 (일정·쪽지·알림·챗봇)    | schedule-service, message-service, notification-service, chatbot-service |
-| **주영찬** | 백엔드 (급여·설정) / 문서화         | payroll-service, config-service, README 리뷰    |
+| 이름       | 역할                              | 주요 기여 서비스                               |
+|------------|-----------------------------------|----------------------------------------------|
+| **신현국** | PM / 근태·휴가·전자결재 서비스 개발 | attendance, vacation, approval 서비스 설계·구현 |
+| **김예은** | 백엔드 (인사·인증·증명서)          | auth, hr, certificate 서비스 개발             |
+| **이호영** | 프론트엔드 (일정·쪽지·알림·챗봇)   | schedule, message, notification, chatbot UI 개발 |
+| **주영찬** | 백엔드 (급여·설정) / 문서화        | payroll, config 서비스 + README 리뷰          |
 
 ---
 
@@ -152,20 +158,6 @@ MSA 기반으로 인사·근태·휴가·급여·전자결재·일정·쪽지·�
 - Google Slides:  
   https://docs.google.com/presentation/d/12ljI3Y9HnpEqJc-bQNK0Zh_hEZbqaf3ECvE7X-3j0RM  
 
----
-
-## 시작하기
-
-### 1) 프론트엔드 레포지토리  
-🔗 https://github.com/samubozo/samubozo-front
-
-### 2) 구동 영상  
-[![Demo 1](https://img.youtube.com/vi/fminNemR4aU/0.jpg)](https://youtu.be/fminNemR4aU)  
-[![Demo 2](https://img.youtube.com/vi/FNfunqiHYh8/0.jpg)](https://youtu.be/FNfunqiHYh8)  
-[![Demo 3](https://img.youtube.com/vi/I1nTGJL1h5I/0.jpg)](https://youtu.be/I1nTGJL1h5I)  
-[![Demo 4](https://img.youtube.com/vi/G7RX3c_EYRM/0.jpg)](https://youtu.be/G7RX3c_EYRM)
-
-> 설치나 로컬 실행 없이도, 영상으로 실제 동작 화면을 확인할 수 있습니다.  
 
 ---
 
@@ -191,5 +183,5 @@ MSA 기반으로 인사·근태·휴가·급여·전자결재·일정·쪽지·�
 
 MIT License © 2025 Samubozo Team  
 
-> 문의 및 피드백은 GitHub 이슈로 남겨주세요.  
+> 문의 및 피드백은 GitHub Issue로 남겨주세요.  
 > 즐거운 개발 되세요!
