@@ -1,6 +1,6 @@
 # SAMUBOZO: 사무보조 플랫폼
 
-🔗 **프론트엔드 레포:** https://github.com/samubozo/samubozo-front
+🔗 프론트엔드 레포: https://github.com/samubozo/samubozo-front
 
 ---
 
@@ -10,6 +10,21 @@
 [![Demo 2](https://img.youtube.com/vi/FNfunqiHYh8/0.jpg)](https://youtu.be/FNfunqiHYh8)  
 [![Demo 3](https://img.youtube.com/vi/I1nTGJL1h5I/0.jpg)](https://youtu.be/I1nTGJL1h5I)  
 [![Demo 4](https://img.youtube.com/vi/G7RX3c_EYRM/0.jpg)](https://youtu.be/G7RX3c_EYRM)
+
+---
+
+## ⚠️ 서비스 접근 제한 안내
+
+현재 AWS 등 클라우드 비용 문제와 보안상 이유로 실 서버 배포 및 로컬 실행이 제한되어 있습니다.  
+따라서 위 데모 영상과 스크린샷을 통해 서비스를 확인해주시기 바랍니다.
+
+1. 서비스 배포 중단  
+   - 클라우드 비용 문제로 온라인 배포 일시 중단  
+   - 실환경 URL 제공 불가  
+
+2. 로컬 실행 제한  
+   - Config Server 설정 정보(private repo) 비공개  
+   - 13개 MSA 서비스 간 의존성으로 개별 실행 어려움  
 
 ---
 
@@ -34,16 +49,33 @@
 
 ## 프로젝트 개요
 
-- **목적:** 분산·수작업 HR 업무를 MSA로 전환해 업무 속도·정확성 극대화  
+- **목적:** 분산·수작업 HR 업무를 MSA로 전환하여 업무 속도 및 정확성 극대화  
 - **기간:** 2025.06.20 – 2025.08.12  
 - **팀 규모:** 4명  
-- **내 역할 (신현국):** PM, 근태·휴가·전자결재 서비스 설계·구현·팀 일정 관리  
+- **내 역할 (신현국):**  
+  - PM: 일정·리스크 관리  
+  - 서비스 설계·구현: 근태·휴가·전자결재
 
 ---
 
 ## 서비스 소개
 
 <img src="https://github.com/user-attachments/assets/d014d437-5f36-46e8-8cb3-bfea17e2bb2c" width="100%" alt="서비스 소개 매트릭스"/>
+
+서비스의 고객 니즈, 해결 접근, 기대 효과, 차별성을 4분면으로 요약했습니다.
+
+| Needs                                          | Approach                        |
+|-----------------------------------------------|---------------------------------|
+| 높은 기존 SaaS 비용 및 과도한 기능              | MVP 기반 핵심 기능 경량화       |
+| 수기 업무 오류·누락·실수 위험                  | 출퇴근·급여 데이터 연계         |
+| 전문성 부족·반복 업무로 인한 생산성 저하         | 권한별 직관적 UI 제공           |
+| 자동화 미비로 인사담당 업무 과중                 | 업무 프로세스 자동화           |
+
+| Benefits                                      | Competition                   |
+|-----------------------------------------------|-------------------------------|
+| 즉시 사용 가능한 기본 서비스 지원             | 기존 SaaS 대비 낮은 도입 비용 |
+| 업무 중심 설계 + MSA 기반 확장성               | 경량 구조로 빠른 배포·테스트  |
+| 자동화로 오류·누락 방지 → 생산성 향상         | 핵심 기능 집중 제공 → 복잡성 최소화 |
 
 ---
 
@@ -127,18 +159,18 @@
 - **급여 관리**  
   - `http://{DOMAIN}/payroll-service/swagger-ui.html`  
 
-> **특징:** MSA 12개 서비스 API 문서 통합, 알파벳순 정렬, 응답 시간 표시, 실시간 테스트  
+> **특징:** MSA 12개 서비스 API 문서 통합 · 알파벳순 정렬 · 응답 시간 표시 · 실시간 테스트
 
 ---
 
 ## 팀 및 역할
 
-| 이름       | 역할                              | 주요 기여 서비스                               |
-|------------|-----------------------------------|----------------------------------------------|
-| **신현국** | PM / 근태·휴가·전자결재 서비스 개발 | attendance, vacation, approval 서비스 설계·구현 |
-| **김예은** | 백엔드 (인사·인증·증명서)          | auth, hr, certificate 서비스 개발             |
-| **이호영** | 프론트엔드 (일정·쪽지·알림·챗봇)   | schedule, message, notification, chatbot UI 개발 |
-| **주영찬** | 백엔드 (급여·설정) / 문서화        | payroll, config 서비스 + README 리뷰          |
+| 이름       | 역할                              | 주요 기여 서비스                                          |
+|------------|-----------------------------------|-----------------------------------------------------------|
+| **신현국** | PM / 근태·휴가·전자결재 서비스 개발 | - `attendance-service`: 출퇴근·연차 자동 계산<br>- `vacation-service`: 휴가 워크플로우<br>- `approval-service`: 전자결재 흐름 설계 |
+| **김예은** | 백엔드 (인사·인증·증명서)          | - `auth-service`: JWT 인증<br>- `hr-service`: 직원·조직 관리<br>- `certificate-service`: PDF 증명서 생성 |
+| **이호영** | 프론트엔드 (일정·쪽지·알림·챗봇)   | - `schedule-service` UI<br>- `message-service` 실시간 채팅<br>- `notification-service` SSE 알림<br>- `chatbot-service` 챗봇 인터페이스 |
+| **주영찬** | 백엔드 (급여·설정) / 문서화        | - `payroll-service`: 급여 계산 로직<br>- `config-service`: 중앙 설정 관리<br>- README·기여 문서 리뷰 |
 
 ---
 
@@ -157,7 +189,6 @@
 
 - Google Slides:  
   https://docs.google.com/presentation/d/12ljI3Y9HnpEqJc-bQNK0Zh_hEZbqaf3ECvE7X-3j0RM  
-
 
 ---
 
@@ -181,7 +212,7 @@
 
 ## 라이선스
 
-MIT License © 2025 Samubozo Team  
+MIT License © 2025 Samubozo Team
 
 > 문의 및 피드백은 GitHub Issue로 남겨주세요.  
 > 즐거운 개발 되세요!
