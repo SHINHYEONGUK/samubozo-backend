@@ -194,11 +194,6 @@
 - 모바일 앱(iOS/Android) 버전 개발  
 - ELK 스택 로그 분석 강화  
 
----
 
-## 라이선스
 
-MIT License © 2025 Samubozo Team
 
-> 문의 및 피드백은 GitHub Issue로 남겨주세요.  
-> 즐거운 개발 되세요!
